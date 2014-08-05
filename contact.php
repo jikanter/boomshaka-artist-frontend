@@ -28,6 +28,7 @@ else {
 	echo("<textarea form='artist-contact-info' name='content' rows='20' cols='200'>");
 	echo("{$response[post_content]}");
 	echo("</textarea>");
+	echo("<input name='post_type' value='contact' type='hidden' />");
 	echo("<input name='post_id' value='${post_id}' type='hidden' />");
 	echo("<input value='Update Post' type='submit' />");
 	echo("</form>");

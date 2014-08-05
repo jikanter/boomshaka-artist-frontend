@@ -3,7 +3,7 @@
  */
 //define('WP_DEBUG', true);
 require_once('config.php');
-$post_id = artist_posts['bio'];
+$post_id = $artist_posts['bio'];
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
 								       'method' => 'POST', 
@@ -29,6 +29,7 @@ else {
 	echo("<textarea form='artist-bio-info' name='content' rows='20' cols='200'>");
 	echo("{$response[post_content]}");
 	echo("</textarea>");
+	echo("<input name='post_type' value='bio' type='hidden' />");
 	echo("<input name='post_id' value='${post_id}' type='hidden' />");
 	echo("<input value='Update Post' type='submit' />");
 	echo("</form>");
