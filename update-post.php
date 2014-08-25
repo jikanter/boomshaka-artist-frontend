@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * Utility functions for wordpress upload post
+ * @package None
+ * @subpackage None
+ * @since 3.9.2
+ */
 require_once('config.php');
 // not used
 $status = array(
