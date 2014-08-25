@@ -17,7 +17,7 @@ if ($response && xmlrpc_is_fault($response)) {
 else { 
 	echo("<!DOCTYPE HTML>");
 		echo '<head>';
-    	echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
+		echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
 		echo '</head>';
 		echo '<body>';	
 
