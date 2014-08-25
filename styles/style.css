@@ -116,14 +116,21 @@ textarea {
 //	clear: both;
 //}
 
-h1 {
+h1, h2 {
 	color: white;
 	display: block;
 	margin-bottom: 1rem;
 	padding: 1rem;
-	font-size: 3em;
 	font-weight: bold;
+}
+
+h1 {
+	font-size: 3em;
 	background-color: #663399;
+}
+h2 {
+	font-size: 2em;
+	background-color: DodgerBlue;
 }
 
 /*--------------------------------------------------------------
@@ -231,4 +238,14 @@ textarea {
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
+}
+
+
+
+form + h1 {
+	margin-top: 1em;
+}
+
+form + h2 {
+	margin-top: 1em;
 }
