@@ -16,6 +16,11 @@ if ($response && xmlrpc_is_fault($response)) {
 } 
 else { 
 	echo("<!DOCTYPE HTML>");
+		echo '<head>';
+    	echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
+		echo '</head>';
+		echo '<body>';	
+
 	if (defined('WP_DEBUG')) { 
 		echo("<pre>");
 		print_r($response);
@@ -33,5 +38,8 @@ else {
 	echo("<input name='post_id' value='${post_id}' type='hidden' />");
 	echo("<input value='Update Post' type='submit' />");
 	echo("</form>");
+
+	echo '</body>';
+	echo '</html>';
 }
 ?>
