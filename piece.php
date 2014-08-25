@@ -5,8 +5,8 @@ $post_id = preg_replace('/[^0-9]/', '', $_GET['post_id']);
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
 								       'method' => 'POST', 
-									   'header' => 'Content-Type: text/xml', 
-									   'content' => $request)));
+									     'header' => 'Content-Type: text/xml', 
+									     'content' => $request)));
 $data = file_get_contents($endpoint, false, $context);
 $response = xmlrpc_decode($data);
 if ($response && xmlrpc_is_fault($response)) { 
@@ -14,6 +14,11 @@ if ($response && xmlrpc_is_fault($response)) {
 } 
 else { 
 	echo("<!DOCTYPE HTML>");
+  echo("<html>");
+  echo("<head>");
+  //DAN GO!
+  echo("</head>");
+  echo("<body>");
 	if (defined('WP_DEBUG')) { 
 		echo("<pre>");
 		print_r($response);
@@ -45,8 +50,10 @@ else {
   echo("</section>");
   echo("<br />"); // get rid of this
 	echo("<input value='Update Post' type='submit' />");
-	echo("<input name='post_type' value='bio' type='hidden' />");
+	echo("<input name='post_type' value='piece' type='hidden' />");
 	echo("<input name='post_id' value='${post_id}' type='hidden' />");
 	echo("</form>");
+  echo("</body>");
+  echo("</html>");
 }
 ?>
