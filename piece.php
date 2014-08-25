@@ -45,7 +45,7 @@ else {
   echo("<input name='piece_height' type='text' />");
   echo("</section>");
   echo("<section>");
-  echo("<label for='piece_length'>Length:</label>");
+  echo("<label for='piece_length'>Length:</label>"
   echo("<input name='piece_length' type='text' />");
   echo("</section>");
   echo("<br />"); // get rid of this
