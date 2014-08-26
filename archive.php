@@ -22,6 +22,12 @@ if ($response && xmlrpc_is_fault($response)) {
 } 
 else { 
 	echo("<!DOCTYPE HTML>");
+		echo '<head>';
+    	echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
+		echo '</head>';
+		echo '<body>';	
+		echo '<h1>Archive</h1>';	
+		
 	if (defined('WP_DEBUG')) { 
 		echo("<pre>");
 		print_r($response);
@@ -30,7 +36,7 @@ else {
   // will not have a {$response[post_title]} because this is a list of posts
   for ($i = 0; $i < sizeof($response); $i++) {
     $response_content_item = $response[$i];
-    echo("<h1>{$response_content_item[post_title]}</h1>");
+    echo("<h2>{$response_content_item[post_title]}</h2>");
     if ($_GET['flash'] != '') {  
     	echo("<h2 style='color: green;'>" . $_GET['flash'] . "</h2>");
     }
@@ -43,5 +49,8 @@ else {
     echo("<input value='Update Post' type='submit' />");
     echo("</form>");
   }
+
+	echo '</body>';
+	echo '</html>';
 }
 ?>
