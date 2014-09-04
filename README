@@ -1,5 +1,13 @@
 Boomshaka Artist FrontEnd
 
+Depends: jquery-2.1.0, dropzone-3.10.2, IXR-php-1.7.4
+
 Authors: 
 	Jordan Kanter
 	Dan Schreck
+  
+Setup:
+  1. Add your username, password, and the URL of your xmlrpc wordpress server to the file `config.php`.
+  2. Add a statement defining the variable 'INCLUDE_DIR' to `config.php`. The default is the directory named 'Contrib' in the top level directory
+  3. Make sure the IXR_Library.php is in the 'INCLUDE_DIR' folder
+  
