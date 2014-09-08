@@ -1,7 +1,13 @@
 <?php
 require_once('config.php');
-// also known as the attachment id in the wordpress api
-$media_id = preg_replace('/[^0-9]/', '', $_GET['media_id']);
+
+// also known as the attachment id in the wordpress api. set it to 8 (default media test image) if it is not set
+if (isset($_GET['media_id'])) {
+  $media_id = preg_replace('/[^0-9]/', '', $_GET['media_id']);
+}
+else { 
+  $media_id = $artist_posts['media'];
+}
 $request = xmlrpc_encode_request("wp.getMediaItem", array(0, $username, $password, $media_id));
 $context = stream_context_create(array('http' => array(
                         'method' => 'POST',
@@ -16,7 +22,9 @@ else {
   echo("<!DOCTYPE HTML>");
   echo("<html>");
   echo("<head>");
-  echo("<script src='scripts/dropzone.js' type='text/javascript'></script>");
+  echo("<script src='scripts/jquery.js' type='text/javascript'></script>");
+  //echo("<script src='scripts/dropzone.js' type='text/javascript'></script>");
+  echo("<script src='scripts/config.js' type='text/javascript'></script>");
   echo("</head>");
   echo("<body>");
   if (defined('WP_DEBUG')) { 
@@ -24,16 +32,21 @@ else {
     print_r($response);
     echo("</pre>");
   }
-  echo("<h1>{$response[title]}</h1>");
-  if ($GET['flash'] != '') { 
-    echo("<h2 style='color: green;'>" . $_GET['flash'] . '</h1>');
+  echo("<h1>{$response['title']}</h1>");
+  if (isset($_GET['flash'])) { 
+    if ($_GET['flash'] != '') { 
+        echo("<h2 style='color: green;'>" . $_GET['flash'] . '</h2>');
+    }
   }
-  echo("<form id='artist-media-info' method='POST' enctype='application/x-www-form-urlencoded' action='update-media.php'>)");
+  echo("<img src='{$response['link']}' />");
+  echo("<form method='POST' enctype='multipart/form-data' action='update-media.php'>");
   echo("<section>");
-  echo("<input name='media_filename' type='file' accept='.jpeg,.jpg,.jpe,image/jpeg,.png,image/png,.gif,image/gif,.pdf,application/pdf'>");
+  echo("<label for='media-file'>Upload your image here. Please note we support jpeg, png, gif, and pdf files.</label>");
+  echo("<input name='media-file' type='file' id='media-file' accept='.jpeg,.jpg,.jpe,image/jpeg,.png,image/png,.gif,image/gif,.pdf,application/pdf'>");
   echo("</input>");
+  echo("</section>");
+  echo("<input value='{$media_id}' name='media-id' type='hidden' />");
   echo("<input value='Update Media' type='submit' />");
-  echo("<input value='{$media_id}' type='hidden' />"); // I do not actually use this when setting a media item
   echo("</form>");
   echo("</body>");
   echo("<html>");
