@@ -156,7 +156,6 @@ function binaryContents($filename) {
   }
   return $contents;
 }
-
 function debugUploaderContents($uploader) {
   // uploader is an instance of Boom_MediaUpload
   // print the contents of the object if 'WP_DEBUG' is set
@@ -183,8 +182,7 @@ $status = array('jpg' => 'Thank you. JPEG uploaded',
 $finfo = new finfo(FILEINFO_MIME_TYPE);
 $fname = 'media-file';
 $stagedFilePath = runUpload($fname);
-// get the file extension index (jpg | png | gif | pdf)
-// get the type of the post                 
+// get the mimeType from the file extension (jpg | png | gif | pdf)                 
 $postType = $finfo->file($stagedFilePath);
 $uploader = new Boom_MediaUpload($stagedFilePath, $postType, $media_id, new IXR_Base64(binaryContents($stagedFilePath)));
 $xmlClient = new IXR_Client($endpoint);
@@ -194,11 +192,8 @@ if (!$data) {
     throw new RuntimeException('Media file not uploaded. 404 returned.');
 }
 else {
-    if (defined('WP_DEBUG')) { 
-      var_dump($stagedFilePath);
-    }
-    //var_dump($uploader);
     // get the status message from the mimetype (<type>/<subtype>) string by extracting just the <subtype> part
+    // using this array
     $fileExtensionFromMimeTypeArray = array("image/jpeg"      => 'jpg',
                                             "image/png"       => 'png',
                                             "image/gif"       => 'gif',
