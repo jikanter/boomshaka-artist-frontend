@@ -6,8 +6,8 @@ $post_id = $artist_posts['contact']; // the contact page
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
 								       'method' => 'POST', 
-									     'header' => 'Content-Type: text/xml', 
-									     'content' => $request)));
+									   'header' => 'Content-Type: text/xml', 
+									   'content' => $request)));
 $data = file_get_contents($endpoint, false, $context);
 $response = xmlrpc_decode($data);
 if ($response && xmlrpc_is_fault($response)) { 

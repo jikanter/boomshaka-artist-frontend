@@ -1,6 +1,6 @@
 Boomshaka Artist FrontEnd
 
-Depends: jquery-2.1.0, dropzone-3.10.2, IXR-php-1.7.4
+Depends: jquery-2.1.0, dropzone-3.10.2 (included), IXR-php-1.7.4 (included)
 
 Authors: 
 	Jordan Kanter

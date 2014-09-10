@@ -2,36 +2,46 @@
 /*
  * Media Upload Class. Represents a media object for upload into wordpress
  */
+
 class Boom_MediaUpload { 
   /**
    * @access public
    * @var string
    */
-  var $name; // filename
+  public $name; // filename
   
   /**
    * @access public
    * @var string
    */
-  var $type; // file MIME/TYPE
+  public $type; // file MIME/TYPE
   
   /**
    * @access public
    * @var binary
    */
-  var $bits;
+  // TODO: base64 encode the bits correctly for wordpress upload!
+  public $bits;
   
   /**
    * Whether to overwrite the data in the wordpress instance. defaults to true;
    * @access public
    */
-  var $overwrite = true;
+  public $overwrite;
   
-  function ___construct($name, $type, $bits) { 
+  /**
+   * whether to assign this data to a post id
+   * @access public 
+   * @var integer
+   */
+  public $postid;
+  
+  function __construct($name, $type, $postid, $bits) { 
     $this->name = $name;
     $this->type = $type;
     $this->bits = $bits;
-    $this->overwrite = $overwrite;
+    $this->overwrite = true;
+    $this->postid = $postid;
   }
 };
 
