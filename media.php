@@ -37,10 +37,13 @@ else {
   }
   echo("<form id='artist-media-info' method='POST' enctype='multipart/form-data' action='update-media.php'>");
   echo("<section>");
-  echo("<label for='media-file'>Upload your image by dragging and dropping here. Please note we support jpeg, png, gif, and pdf files.</label>");
+  echo("<label for='media-file'>Upload your image by Choosing a file. Please note we support jpeg, png, gif, and pdf files. </label>");
   echo("<input name='media-file' type='file' accept='.jpeg,.jpg,.jpe,image/jpeg,image/jpg,.png,image/png,.gif,image/gif,.pdf,application/pdf'>");
   echo("</input>");
+  echo("</section>");
+  echo("<section>");
   echo("<input value='Update Media' type='submit' />");
+  echo("</section>");
   echo("<input value='{$media_id}' type='hidden' />"); // I do not actually use this when setting a media item
   echo("</form>");
   echo("</body>");
