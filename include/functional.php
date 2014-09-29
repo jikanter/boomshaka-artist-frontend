@@ -1,5 +1,7 @@
 <?php
 
+// Boomshaka functional programming library, inspired by pharen (http://pharen.org)
+
 class Boom_Functional { 
   public $functions = array();
 }

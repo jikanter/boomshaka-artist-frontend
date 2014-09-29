@@ -1,6 +1,6 @@
 Boomshaka Artist FrontEnd
 
-Depends: jquery-2.1.0, dropzone-3.10.2 (included), IXR-php-1.7.4 (included)
+Depends: jquery-2.1.0, phalcon-1.3.3 dropzone-3.10.2 (included), IXR-php-1.7.4 (included), wc-client-api-0.3.1 (included)
 
 Authors: 
 	Jordan Kanter
@@ -10,4 +10,21 @@ Setup:
   1. Add your username, password, and the URL of your xmlrpc wordpress server to the file `config.php`.
   2. Add a statement defining the variable 'INCLUDE_DIR' to `config.php`. The default is the directory named 'Contrib' in the top level directory
   3. Make sure the IXR_Library.php is in the 'INCLUDE_DIR' folder. The IXR Library is required for proper base64 serializing of uploaded files.
+  4. Compile phalcon
+    OSX - 
+      In terminal, do:
+      1. xcode-select --install
+      2. curl -o phalcon-1.3.3.zip https://github.com/phalcon/cphalcon/archive/1.3.3.zip
+      3. unzip phalcon-1.3.3.zip
+      4. cd phalcon-1.3.3/build/64bit
+      5. sudo /usr/bin/phpize (make sure you enter your password)
+      6. sudo ./configure --with-php-config=/usr/bin/php-config
+      7. sudo make
+      8. sudo make install
+      Then edit /etc/php.ini and add the following line:
+      extension=phalcon.so
+      9. sudo apachectl -k restart
+  5. Make sure wc-client-api-0.3.1 is in the 'INCLUDE_DIR' folder. The wc-client-api-0.3.1 is required for proper ecommerce support for uploaded images
+  6. Generate a woocommerce api key for your client.  
   
+      
