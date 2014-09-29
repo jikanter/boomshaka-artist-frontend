@@ -31,7 +31,7 @@ else {
     print_r($response);
     echo("</pre>");
   }*/
-  //echo("<h1>{$response['title']}</h1>");
+  //gecho("<h1>{$response['title']}</h1>");
   if ((isset($_GET['flash'])) && ($_GET['flash'] != '')) { 
     echo("<h2 style='color: green;'>" . $_GET['flash'] . '</h1>');
   }

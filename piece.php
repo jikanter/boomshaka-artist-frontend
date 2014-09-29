@@ -1,7 +1,12 @@
 <?php
 require_once('config.php');
 // sanitize the post_id. make sure 
-$post_id = preg_replace('/[^0-9]/', '', $_GET['post_id']);
+if (isset($_GET['post_id'])) { 
+  $post_id = preg_replace('/[^0-9]/', '', $_GET['post_id']);
+}
+else { 
+  $post_id = 14;
+}
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
 								       'method' => 'POST', 
@@ -45,7 +50,7 @@ else {
   echo("<input name='piece_height' type='text' />");
   echo("</section>");
   echo("<section>");
-  echo("<label for='piece_length'>Length:</label>"
+  echo("<label for='piece_length'>Length:</label>");
   echo("<input name='piece_length' type='text' />");
   echo("</section>");
   echo("<br />"); // get rid of this

@@ -5,15 +5,13 @@
  * @subpackage None
  * @since 3.9.2
  */
+/* TODO: Write Tests */
+
 require_once('config.php');
 // Boomshaka functional programming library, inspired by pharen (http://pharen.org)
 require_once('functional.php');
 require_once('media-class.php');
 require_once(INCLUDE_DIR . '/IXR_Library.php');
-
-//define('WP_DEBUG', TRUE);
-
-
 
 if (isset($_GET['media_id'])) {
   $media_id = preg_replace('/[^0-9]/', '', $_GET['media_id']);
@@ -195,6 +193,7 @@ $postType = $finfo->file($stagedFilePath);
 $uploader = new Boom_MediaUpload($stagedFilePath, $postType, $media_id, new IXR_Base64(binaryContents($stagedFilePath)));
 $xmlClient = new IXR_Client($endpoint);
 $xmlClient->query('wp.uploadFile', array(0, $username, $password, $uploader));
+
 $data = $xmlClient->getResponse();
 if (!$data) {
     throw new RuntimeException('Media file not uploaded. 404 returned.');

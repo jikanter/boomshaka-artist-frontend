@@ -3,6 +3,8 @@
  * Media Upload Class. Represents a media object for upload into wordpress
  */
 
+// woocommerce productizer
+require_once('include/product-class.php');
 class Boom_MediaUpload { 
   /**
    * @access public
@@ -36,6 +38,14 @@ class Boom_MediaUpload {
    */
   public $postid;
   
+  /**
+   * whether to create a woocommerce product based on this media object
+   * @access public
+   * @var object
+   * if this is not false, it is the product that represents this media object
+   */
+  public $productp;
+  
   function __construct($name, $type, $postid, $bits) { 
     $this->name = $name;
     $this->type = $type;
@@ -43,6 +53,11 @@ class Boom_MediaUpload {
     $this->overwrite = true;
     $this->postid = $postid;
   }
+  
+  function productize_media() { 
+    $this->productp = new Boom_Product_Mixin($this->name);
+  }
+  
 };
 
 ?>
