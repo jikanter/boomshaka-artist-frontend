@@ -6,6 +6,7 @@ require_once('config.php');
 require_once('views/bio.php');
 
 $post_id = $artist_posts['bio'];
+// TODO: use IXR Library
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
 								       'method' => 'POST', 

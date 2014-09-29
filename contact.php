@@ -2,8 +2,9 @@
 /* test xml app
  */
 require_once('config.php');
+// require the contact view
 require_once(VIEW_DIR . '/contact.php');
-
+// TODO: use IXR Library
 $post_id = $artist_posts['contact']; // the contact page
 $request = xmlrpc_encode_request("wp.getPost", array(0, $username, $password, $post_id));
 $context = stream_context_create(array('http' => array(
