@@ -1,0 +1,7 @@
+# /test-phalcon-app/.htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /~admin/2014/7/21/tests/test-phalcon-app/
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>

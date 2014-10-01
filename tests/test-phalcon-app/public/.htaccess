@@ -1,0 +1,8 @@
+#/test-phalcon-app/public/.htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteBase /~admin/2014/7/21/tests/test-phalcon-app/public/
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>

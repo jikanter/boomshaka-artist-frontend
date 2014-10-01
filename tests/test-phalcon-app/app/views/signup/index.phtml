@@ -1,0 +1,24 @@
+<?php use Phalcon\Tag; ?>
+
+<h2>Sign up</h2>
+
+<form method="POST" action="/~admin/2014/7/21/tests/test-phalcon-app/signup/register" enctype="application/x-www-form-urlencoded">
+
+<p>
+  <label for="name">Name</label>
+  <?php echo Tag::textField("name") ?>
+</p>
+
+<p>
+  <label for="email">E-mail</label>
+  <?php echo Tag::textField("email") ?>
+</p>
+
+
+<?php echo Tag::hiddenField(array("wp_id", "value" => "admin")) ?>
+<?php echo Tag::hiddenField(array("wp_pass", "value" => "admin")) ?>
+<p>
+  <?php echo Tag::submitButton("Register") ?>
+</p>
+
+</form>
