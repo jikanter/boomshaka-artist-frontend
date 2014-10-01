@@ -5,14 +5,15 @@ require_once(VIEW_DIR . '/signup.php');
 require_once('vendor/autoload.php');
 
 function BoomSendSignupRequestMail() { 
+  global $mail_config;
   $mail = new PHPMailer;
   
   $mail->isSMTP();
-  $mail->Host = 'smtp.gmail.com';
+  $mail->Host = $mail_config['host'];
   $mail->SMTPAuth = true;
   
-  $mail->Username = 'boomshakadesign@gmail.com';
-  $mail->Password = 'boom1234';
+  $mail->Username = $mail_config['username'];
+  $mail->Password = $mail_config['password'];
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
   
@@ -37,7 +38,7 @@ function BoomSendSignupRequestMail() {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
   $status = BoomSendSignupRequestMail()->Status;
   if ($status == "Message Sent") { 
-    $flash = "Thank You! Our Hamsters are on their wheels and are firing up your site.";
+    $flash = "Thank You! Our Team of Hamsters are on their wheels and are firing up your site. As soon as they reach maximum revolutions, you will hear from us via email..";
   }
   else { 
     $flash = $status;
