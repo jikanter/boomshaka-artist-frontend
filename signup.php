@@ -11,14 +11,14 @@ function BoomSendSignupRequestMail() {
   $mail->Host = 'smtp.gmail.com';
   $mail->SMTPAuth = true;
   
-  $mail->Username = 'jikanter@gmail.com';
+  $mail->Username = 'boomshakadesign@gmail.com';
   $mail->Password = 'M0PRKc5vI8ZMk1Zf';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
   
   $mail->From = 'no-reply@jordankanter.com';
   // to
-  $mail->addAddress('jikanter@gmail.com');
+  $mail->addAddress('boomshakadesign@gmail.com');
   $mail->Subject = "[Boomshaka] Site Request: {$_POST['firstname']} {$_POST['lastname']} for {$_POST['domain']}";
   $mail->Body = "Name: {$_POST['firstname']} {$_POST['lastname']}\n";
   $mail->Body .= "Email: {$_POST['email']}\n";

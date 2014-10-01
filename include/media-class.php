@@ -4,7 +4,7 @@
  */
 
 // woocommerce productizer, use the API Key in the config
-require_once(LIBRARY_DIR . '/product-class.php');
+require_once('../' . LIBRARY_DIR . '/product-class.php');
 
 class Boom_MediaUpload { 
   /**
@@ -69,7 +69,7 @@ class Boom_MediaUpload {
   }
   
   function productize_media($product_fields) { 
-    return new Boom_Product_Mixin(
+    return new Boom_Product_Api(
       'create', // action
       $product_fields['title'], // title
       $product_fields['description'], // description

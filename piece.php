@@ -4,6 +4,9 @@ require_once('config.php');
 // require the piece view
 require_once(VIEW_DIR . '/piece.php');
 
+// require the Boom product api
+require_once(LIBRARY_DIR . '/product-class.php');
+
 // sanitize the post_id. make sure 
 if (isset($_GET['post_id'])) { 
   $post_id = preg_replace('/[^0-9]/', '', $_GET['post_id']);
@@ -18,6 +21,11 @@ $context = stream_context_create(array('http' => array(
 									     'content' => $request)));
 $data = file_get_contents($endpoint, false, $context);
 $response = xmlrpc_decode($data);
+
+$product_data = new Boom_Product_Api();
+$response['product'] = $product_data;
+
+
 if ($response && xmlrpc_is_fault($response)) { 
 	trigger_error("xmlrpc: {$response['faultString']}, {$response['faultCode']}");
 } 

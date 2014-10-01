@@ -8,9 +8,8 @@
 /* TODO: Write Tests */
 
 require_once('config.php');
-// Boomshaka functional programming library, inspired by pharen (http://pharen.org)
-require_once('functional.php');
-require_once('media-class.php');
+require_once(LIBRARY_DIR . '/functional.php');
+require_once(LIBRARY_DIR . '/media-class.php');
 require_once(INCLUDE_DIR . '/IXR_Library.php');
 
 if (isset($_GET['media_id'])) {
