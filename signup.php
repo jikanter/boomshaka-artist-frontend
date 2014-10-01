@@ -12,7 +12,7 @@ function BoomSendSignupRequestMail() {
   $mail->SMTPAuth = true;
   
   $mail->Username = 'boomshakadesign@gmail.com';
-  $mail->Password = 'M0PRKc5vI8ZMk1Zf';
+  $mail->Password = 'boom1234';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
   
