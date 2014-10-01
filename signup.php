@@ -37,7 +37,7 @@ function BoomSendSignupRequestMail() {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
   $status = BoomSendSignupRequestMail()->Status;
   if ($status == "Message Sent") { 
-    $flash = "Thank You! Our Hamsters are on their wheels  will be firing up your site shortly.";
+    $flash = "Thank You! Our Hamsters are on their wheels and are firing up your site.";
   }
   else { 
     $flash = $status;

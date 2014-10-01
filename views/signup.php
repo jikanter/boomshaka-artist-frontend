@@ -7,7 +7,7 @@ echo <<<BOOMSHAKA
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
       </head>
       <body>
-      <h1>Sign up for BOOMSHAKA Beta</h1>
+      <h1>Sign up for a BOOMSHAKA Beta invite</h1>
       <h2>Get your artist website:</h2>
         <form method="POST" action="{$_SERVER['REQUEST_URI']}" enctype="application/x-www-form-urlencoded">
           <section>
