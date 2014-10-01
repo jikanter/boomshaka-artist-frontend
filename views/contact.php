@@ -1,10 +1,10 @@
 <?php
-function BoomRenderContact($post_id, $response, $flash = '') { 
+function BoomRenderContact($post_id = 1, $response = array(), $flash = '') { 
 	echo("<!DOCTYPE HTML>");
-	echo '<head>';
-	echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
-	echo '</head>';
-	echo '<body>';	
+	  echo '<head>';
+	  echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
+	  echo '</head>';
+	  echo '<body>';	
 		
 	 echo("<h1>{$response['post_title']}</h1>");
 	if ($flash != '') {  

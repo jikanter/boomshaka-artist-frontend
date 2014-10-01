@@ -1,11 +1,11 @@
 <?php
-function BoomRenderBio($post_id, $response, $flash = '') { 
+function BoomRenderBio($post_id = 1, $response = array(), $flash = '') { 
 	echo("<!DOCTYPE HTML>");
-		echo '<head>';
-		echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
-		echo '</head>';
-		echo '<body>';	
-	echo("<h1>{$response['post_title']}</h1>");
+	  echo '<head>';
+	  echo ' <link rel="stylesheet" href="styles/style.css" type="text/css">';
+	  echo '</head>';
+	  echo '<body>';	
+	  echo("<h1>{$response['post_title']}</h1>");
 	if ($flash != '') {  
 		echo("<h2 style='color: green;'>" . $flash . "</h2>");
 	}

@@ -1,0 +1,17 @@
+{
+  "authors": [
+    {
+      "name": "Jordan Kanter",
+      "email": "jikanter@gmail.com"
+    },
+    {
+      "name": "Dan Schreck",
+      "email": "art.starschreck@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.0.0",
+    "phpmailer/phpmailer": "dev-master"
+  },
+  "license": "proprietary"
+}

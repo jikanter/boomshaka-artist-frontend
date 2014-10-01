@@ -1,5 +1,5 @@
 <?php
-function BoomRenderPiece($post_id, $response, $flash = '') {
+function BoomRenderPiece($post_id = 1, $response = array(), $flash = '') {
 	echo("<!DOCTYPE HTML>");
   echo("<html>");
   echo("<head>");
