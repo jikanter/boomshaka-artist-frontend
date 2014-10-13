@@ -8,9 +8,8 @@ echo <<<BOOMSHAKA
       </head>
       <body>
 	
-      <h1>BOOMSHAKA Beta invite</h1>
-      <h2>Get your artist website:</h2>
-		<div class="signup">
+      <h1>Artist Websites by BOOMSHAKA<sup>(beta invite)</sup></h1>
+      <h2>Show your work to the world</h2>
         <form method="POST" action="{$_SERVER['REQUEST_URI']}" enctype="application/x-www-form-urlencoded">
           <section>
             <label for="firstname">First Name</label>
@@ -28,10 +27,8 @@ echo <<<BOOMSHAKA
             <label for="domain">Desired Domain </label>
             <input name="domain" id="domain" type="text" /> (e.g. jordankanterartist.com)
           </section>
-          <input id="submit" value="Sign up" type="submit" />
+          <input id="submit" value="Next" type="submit" />
         </form>
-        </div>
-
       </body>
     </html>
 BOOMSHAKA;
