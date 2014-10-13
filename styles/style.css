@@ -92,12 +92,56 @@ a img {
 }
 
 /*--------------------------------------------------------------
+4.0 Background
+--------------------------------------------------------------*/
+
+
+//html { 
+//  background: url(images/bg.jpg) no-repeat center center fixed; 
+//  -webkit-background-size: cover;
+//  -moz-background-size: cover;
+//  -o-background-size: cover;
+//  background-size: cover;
+//}
+
+
+//img.bg {
+//  /* Set rules to fill background */
+//  min-height: 100%;
+//  min-width: 1024px;
+//	
+//  /* Set up proportionate scaling */
+//  width: 100%;
+//  height: auto;
+//	
+//  /* Set up positioning */
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//}
+//
+//@media screen and (max-width: 1024px) { /* Specific to this particular image */
+//  img.bg {
+//    left: 50%;
+//    margin-left: -512px;   /* 50% */
+//  }
+//}
+
+
+/*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
 
 body {
-	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+	width: 75%;
 }
+
+@media screen and (max-width: 900px) { /* Specific to this particular image */
+	body { width: 100%; }
+  }
+
 
 body,
 button,
@@ -116,12 +160,23 @@ textarea {
 //	clear: both;
 //}
 
+body { 
+background: url('../images/bg.jpg') no-repeat center center fixed;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+} 
+
+
 h1, h2 {
 	color: white;
 	display: block;
 	margin-bottom: 1rem;
 	padding: 1rem;
 	font-weight: bold;
+	opacity: 0.8;
+	filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
 h1 {
@@ -144,6 +199,7 @@ textarea {
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
 	padding: 0;
+	line-height: 1.5;
 }
 textarea {
 	margin-bottom: 1rem;
@@ -232,6 +288,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"] {
 	padding: 3px;
+	margin: 1px; // CHANGE TO ARTIST FRONTEND CODE
 }
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
@@ -248,20 +305,16 @@ form + h2 {
 	margin-top: 1em;
 }
 
+
+
+
 /* dropzone */
 .dz-selector { 
   
 }
 
-/*--------------------------------------------------------------
-4.0 Background
---------------------------------------------------------------*/
+//.signup {
+//	background-color: grey;
+//	
+//}
 
-
-html { 
-  background: url(images/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
