@@ -12,12 +12,17 @@ require_once(LIBRARY_DIR . '/functional.php');
 require_once(LIBRARY_DIR . '/media-class.php');
 require_once(INCLUDE_DIR . '/IXR_Library.php');
 
-if (isset($_GET['media_id'])) {
+if (($_SERVER['REQUEST_METHOD'] == 'GET') && (isset($_GET['media_id']))) { 
   $media_id = preg_replace('/[^0-9]/', '', $_GET['media_id']);
+}
+else if (($_SERVER['REQUEST_METHOD'] == 'POST') && (isset($_POST['media_id']))) {
+  // the media id is the last media object uploaded when we upload multiple
+  $media_id = preg_replace('/[^0-9]/', '', $_POST['media_id']);
 }
 else { 
   $media_id = $artist_posts['media'];
 }
+
 function checkUploadedFileSizeP($uploadFileName) { 
   // $uploadFileName is the file name such that
   // $_FILES[$uploadFileName]['size'] is the uploaded File Size
