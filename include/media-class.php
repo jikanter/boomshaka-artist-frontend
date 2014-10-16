@@ -3,8 +3,10 @@
  * Media Upload Class. Represents a media object for upload into wordpress
  */
 
+// require the config directory 
+require_once('config.php');
 // woocommerce productizer, use the API Key in the config
-require_once('../' . LIBRARY_DIR . '/product-class.php');
+require_once(LIBRARY_DIR . '/product-class.php');
 
 class Boom_MediaUpload { 
   /**
@@ -56,15 +58,16 @@ class Boom_MediaUpload {
   public $product_fields;
   
   
-  function __construct($name, $type, $postid, $bits, $product_fields) { 
+  function __construct($name, $type, $postid, $bits, $create_product = false, $product_fields = array()) { 
     $this->name = $name;
     $this->type = $type;
     $this->bits = $bits;
     $this->overwrite = true;
-    $this->create_product = true;
+    $this->create_product = $create_product;
+    $this->product_fields = $product_fields;
     $this->postid = $postid;
-    if (this->create_product) { 
-      $this->productp = $this->productize_media($product_fields);
+    if ($this->create_product) { 
+      $this->productp = $this->productize_media($this->product_fields);
     }
   }
   
