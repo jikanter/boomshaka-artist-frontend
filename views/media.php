@@ -1,7 +1,7 @@
 <?php
 /* all paths in this (and all view scripts are relative to the top level directory)
 /* render a media object that is NOT a piece, but is attached to a piece */
-function BoomRenderMedia($media_id = 14, $response = array(), $flash = '') { 
+function BoomRenderMedia($media_id = 14, $response = array(), $flash = '', $piece_id = 141) { 
   echo("<!DOCTYPE HTML>");
   echo("<html>");
   echo("<head>");
@@ -20,7 +20,7 @@ function BoomRenderMedia($media_id = 14, $response = array(), $flash = '') {
   //gecho("<h1>{$response['title']}</h1>");
   echo("<form id='artist-media-info' method='POST' enctype='multipart/form-data' action='update-media.php' class='dropzone'>");
   echo("<section>");
-  echo("<input name='productize' type='checkbox' />");
+  //echo("<input name='productize' type='checkbox' />");
   // echo("<label for='productize'> These media objects are <a target='productize these media files after uploading'>products</a> (productize these media files after uploading)</label>");
   echo("</section>");
   echo("<div class='fallback'>"); // if dropzone does not work
