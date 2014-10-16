@@ -1,12 +1,14 @@
 <?php
 function BoomRenderSignup() { 
 echo <<<BOOMSHAKA
-    <!DOCTYPE HTML>
+    <!DOCTYPE html>
     <html>
       <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
-      </head>
-      <body>
+		<title>Artist Websites by BOOMSHAKA (beta invite)</title>
+	</head>
+	<body>
 	
       <h1>Artist Websites by BOOMSHAKA<sup>(beta invite)</sup></h1>
       <h2>Show your work to the world</h2>
