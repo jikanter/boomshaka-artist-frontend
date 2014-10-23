@@ -317,6 +317,15 @@ form + h2 {
 }
 
 
+.formcontainer {
+    width: 500px;
+    clear: both;
+}
+.formcontainer input {
+    width: 100%;
+    clear: both;
+}
+
 
 
 /* dropzone */
