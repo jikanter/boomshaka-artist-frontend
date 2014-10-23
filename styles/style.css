@@ -195,7 +195,7 @@ h2 {
 		align: center;
 		}
 	h2 { 
-		font-size: 1.5em;
+		font-size: 1em;
 		align: center;		
 		}
   }
@@ -318,6 +318,9 @@ form + h2 {
 	margin-top: 1em;
 }
 
+p + section {
+	margin-top: 1em;
+}
 
 //.formcontainer {
 //    width: 75%;
