@@ -318,7 +318,7 @@ form + h2 {
 	margin-top: 1em;
 }
 
-p + section {
+form p {
 	margin-top: 1em;
 }
 
