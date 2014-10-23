@@ -37,7 +37,7 @@ echo <<<BOOMSHAKA
           </section>
           <section>
             <label for="domain">Desired Domain </label>
-            <input name="domain" id="domain" type="text" /> (e.g. jordankanterartist.com)
+            <input name="domain" id="domain" type="text" placeholder="(e.g. jordankanterartist.com)"/>
           </section>
           <input id="submit" value="Next" type="submit" />
         </form>
