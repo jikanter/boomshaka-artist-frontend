@@ -148,7 +148,8 @@ select,
 textarea {
 	padding: .5% 2%; 	
 //	color: #8C8C8C;
-	color: black;
+//	color: black;
+	color: DodgerBlue;
 	font-family: sans-serif;
 	//font-size: 16px;
 	font-size: 1.6rem;
@@ -318,8 +319,8 @@ form + h2 {
 
 
 .formcontainer {
-    width: 100%;
-    clear: both;
+    width: 75%;
+//    clear: both;
 }
 .formcontainer input {
     width: 100%;
