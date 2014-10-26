@@ -20,11 +20,12 @@ function BoomSendSignupRequestMail() {
   $mail->From = 'no-reply@jordankanter.com';
   // to
   $mail->addAddress('boomshakadesign@gmail.com');
-  $mail->Subject = "[Boomshaka] Site Request: {$_POST['firstname']} {$_POST['lastname']} for {$_POST['domain']}";
+  $mail->Subject = "[Boomshaka] Site Request: {$_POST['firstname']} {$_POST['lastname']} wanting the following services: {$_POST['imlookingfor']}";
   $mail->Body = "Name: {$_POST['firstname']} {$_POST['lastname']}\n";
   $mail->Body .= "Email: {$_POST['email']}\n";
   // TODO: turn this into an output of a whois query
-  $mail->Body .= "Desired Domain (Eventually this will be a whois query): {$_POST['domain']}";
+  //$mail->Body .= "Desired Domain (Eventually this will be a whois query): {$_POST['domain']}";
+  $mail->Body .= "Desired Services {$_POST['imlookingfor']}";
   
   if (!$mail->send()) { 
     $mail->Status = "Message could not be sent. Mailer Error: " . $mail->ErrorInfo;
