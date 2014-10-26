@@ -37,7 +37,7 @@ echo <<<BOOMSHAKA
           </section>
           <section>
             <label for="imlookingfor">I'm looking for</label>
-            <select>
+            <select name="imlookingfor">
  		<option></option>
 		<option>a brand new artist website</option>
                 <option>updates to my existing website</option>
