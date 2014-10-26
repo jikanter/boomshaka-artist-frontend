@@ -160,7 +160,8 @@ textarea {
 //}
 
 body { 
-background: url('../images/bg.jpg') no-repeat center center fixed;
+/*background-color: #eee;*/
+background: url('../images/tp.jpg') no-repeat center center fixed;
 -moz-background-size: cover;
 -webkit-background-size: cover;
 -o-background-size: cover;
@@ -331,6 +332,20 @@ form p {
 //    clear: both;
 //}
 
+h1.service-request { 
+  padding: 0 0 0 10%;  
+  font-size: 2.2em; 
+  font-family: Verdana; 
+  margin-bottom: 0; 
+  background-color: #713E93;
+}
+
+h2.service-request { 
+  padding: 0 0 1rem 70%; 
+  margin: 0 0 1rem 0;
+  font: bold italic 1em Verdana;
+  background-color: #713E93;
+}
 
 
 /* dropzone */

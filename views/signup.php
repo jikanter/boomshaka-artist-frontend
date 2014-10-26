@@ -20,8 +20,8 @@ echo <<<BOOMSHAKA
 	</head>
 	<body>
 	
-      <h1>Artist Websites by BOOMSHAKA<sup>(beta invite)</sup></h1>
-      <h2>Show your work to the world</h2>
+      <h1 class="service-request">Personalized Artist Websites by BOOMSHAKA<sup>(beta invite)</sup></h1>
+      <h2 class="service-request">Show your work to the world</h2>
         <form method="POST" action="{$_SERVER['REQUEST_URI']}" enctype="application/x-www-form-urlencoded">
           <section>
             <label for="firstname">First Name</label>
@@ -36,13 +36,19 @@ echo <<<BOOMSHAKA
             <input name="email" id="email" type="text" />
           </section>
           <section>
-            <label for="domain">Desired Domain </label>
-            <input name="domain" id="domain" type="text" placeholder="(e.g. jordanartist.com)"/>
+            <label for="imlookingfor">I'm looking for</label>
+            <select>
+ 		<option></option>
+		<option>a brand new artist website</option>
+                <option>updates to my existing website</option>
+		<option>a place to sell my work online</option>
+            </select>
           </section>
           <p>
             <input id="submit" value="Continue" type="submit" />
           </p>
         </form>
+	<p>Please contact Jordan Kanter and Dan Schreck at <a href='&#109;ai&#108;to&#58;bo&#111;m%73&#104;aka%64&#101;s&#105;gn%40gm&#37;61i&#108;%2Ec&#111;m'>&#98;o&#111;&#109;&#115;h&#97;kade&#115;&#105;gn&#64;&#103;ma&#105;l&#46;com</a></p>
       </body>
     </html>
 BOOMSHAKA;
