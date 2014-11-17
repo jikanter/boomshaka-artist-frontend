@@ -90,43 +90,6 @@ a img {
 }
 
 /*--------------------------------------------------------------
-4.0 Background
---------------------------------------------------------------*/
-
-
-//html { 
-//  background: url(images/bg.jpg) no-repeat center center fixed; 
-//  -webkit-background-size: cover;
-//  -moz-background-size: cover;
-//  -o-background-size: cover;
-//  background-size: cover;
-//}
-
-
-//img.bg {
-//  /* Set rules to fill background */
-//  min-height: 100%;
-//  min-width: 1024px;
-//	
-//  /* Set up proportionate scaling */
-//  width: 100%;
-//  height: auto;
-//	
-//  /* Set up positioning */
-//  position: fixed;
-//  top: 0;
-//  left: 0;
-//}
-//
-//@media screen and (max-width: 1024px) { /* Specific to this particular image */
-//  img.bg {
-//    left: 50%;
-//    margin-left: -512px;   /* 50% */
-//  }
-//}
-
-
-/*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
 
@@ -147,20 +110,13 @@ input,
 select,
 textarea {
 	padding: .5% 2%; 	
-//	color: #8C8C8C;
 	color: black;
 	font-family: sans-serif;
-	//font-size: 16px;
 	font-size: 1.6rem;
 	line-height: 1.5; //DS: recommended by W3C http://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-visual-presentation
 }	
 
-//h1, h2, h3, h4, h5, h6 {
-//	clear: both;
-//}
-
 body { 
-/*background-color: #eee;*/
 background: url('../images/tp.jpg') no-repeat center center fixed;
 -moz-background-size: cover;
 -webkit-background-size: cover;
@@ -230,15 +186,11 @@ input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb; 
 	border-radius: 3px;
-//	background: #e6e6e6;
 	background: white;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
 	color: rgba(0, 0, 0, .8);
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-//	font-size: 12px;
-//	font-size: 1.2rem;
-//	line-height: 1;
 	padding: .6em 1em .4em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
@@ -323,29 +275,20 @@ form p {
 	margin-top: 1em;
 }
 
-//.formcontainer {
-//    width: 75%;
-////    clear: both;
+//h1.service-request { 
+//  padding: 0 0 0 10%;  
+//  font-size: 2.2em; 
+//  font-family: Verdana; 
+//  margin-bottom: 0; 
+//  background-color: #713E93;
 //}
-//.formcontainer input {
-//    width: 100%;
-//    clear: both;
+//
+//h2.service-request { 
+//  padding: 0 0 1rem 70%; 
+//  margin: 0 0 1rem 0;
+//  font: bold italic 1em Verdana;
+//  background-color: #713E93;
 //}
-
-h1.service-request { 
-  padding: 0 0 0 10%;  
-  font-size: 2.2em; 
-  font-family: Verdana; 
-  margin-bottom: 0; 
-  background-color: #713E93;
-}
-
-h2.service-request { 
-  padding: 0 0 1rem 70%; 
-  margin: 0 0 1rem 0;
-  font: bold italic 1em Verdana;
-  background-color: #713E93;
-}
 
 
 /* dropzone */
@@ -353,28 +296,15 @@ h2.service-request {
   
 }
 
-//.signup {
-//	background-color: grey;
-//	
-//}
-
 
 form {
 	padding: 1rem;
 }
 
-p#description { // MAY NOT NEED THIS ANYMORE
-	color: blue;
-    align: justify;
-//    text-justify: inter-word;
-}
-
 h1 sup {
     font-size: .33em;
-    vertical-align: top;
-    //line-height: 35px;
-    //margin-left: -30px;  
-  }
+    vertical-align: top;  
+}
   
 /* app styles */
 body.artist-frontend { 

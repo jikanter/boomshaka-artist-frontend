@@ -20,7 +20,7 @@ echo <<<BOOMSHAKA
 	</head>
 	<body>
 	
-      <h1 class="service-request">Personalized Artist Websites by BOOMSHAKA<sup>(beta invite)</sup></h1>
+      <h1 class="service-request">Personalized Artist Websites by BOOMSHAKA<sup> (beta invite)</sup></h1>
       <h2 class="service-request">Show your work to the world</h2>
         <form method="POST" action="{$_SERVER['REQUEST_URI']}" enctype="application/x-www-form-urlencoded">
           <section>
