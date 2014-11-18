@@ -55,10 +55,18 @@ BOOMSHAKA;
 }
 function BoomRenderSignupRequestSubmitted($flash = '') { 
   echo <<<BOOMSHAKA
-    <html>
+  <!DOCTYPE HTML>
+  <html>
+  <head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="styles/style.css" type="text/css" />
+	    <title>Artist Websites by BOOMSHAKA (beta invite)</title>
+  </head>
   <body>
   <h2 style='color: green'>${flash}</h2>
-  <iframe width="420" height="315" src="//www.youtube.com/embed/mOLxlzrxCv0" frameborder="0"  allowfullscreen></iframe>
+  <section class="thank-you">
+    <iframe width="420" height="315" src="//www.youtube.com/embed/mOLxlzrxCv0" frameborder="0"  allowfullscreen></iframe>
+  </section>
   </body>
   </html>
 BOOMSHAKA;
