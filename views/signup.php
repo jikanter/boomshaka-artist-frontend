@@ -63,7 +63,7 @@ function BoomRenderSignupRequestSubmitted($flash = '') {
 	    <title>Artist Websites by BOOMSHAKA (beta invite)</title>
   </head>
   <body>
-  <h2 style='color: green'>${flash}</h2>
+  <h2 class="thank-you">${flash}</h2>
   <section class="thank-you">
     <iframe width="420" height="315" src="//www.youtube.com/embed/mOLxlzrxCv0" frameborder="0"  allowfullscreen></iframe>
   </section>
