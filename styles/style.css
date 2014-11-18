@@ -710,3 +710,13 @@ body.artist-frontend {
   }
 }
 /* end dropzone styles */
+
+/* thank-you page */
+h2.thank-you { 
+  color: green; 
+  background-color: #fff; 
+}
+section.thank-you { 
+  margin-left: 33%; 
+}
+
