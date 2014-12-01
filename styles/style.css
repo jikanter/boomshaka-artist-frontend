@@ -101,7 +101,7 @@ body {
 
 @media screen and (max-width: 1250px) { 
 	body { width: 100%; }
-  }
+	}
 
 
 body,
@@ -143,17 +143,24 @@ h1 {
 }
 h2 {
 	font-size: 2em;
-	background-color: DodgerBlue;
+	background-color: #663399;
+	opacity: 0.4;
+	filter: alpha(opacity=40); /* For IE8 and earlier */	
+}
+
+h1 sup {
+    font-size: .33em;
+    vertical-align: top;  
 }
 
 @media screen and (max-width: 950px) { /* Specific to this particular image */
 	h1 { 
 		font-size: 1.5em;
-		align: center;
+		text-align: center;
 		}
 	h2 { 
 		font-size: 1em;
-		align: center;		
+		text-align: center;		
 		}
   }
 
@@ -299,11 +306,6 @@ form p {
 
 form {
 	padding: 1rem;
-}
-
-h1 sup {
-    font-size: .33em;
-    vertical-align: top;  
 }
   
 /* app styles */
@@ -710,13 +712,3 @@ body.artist-frontend {
   }
 }
 /* end dropzone styles */
-
-/* thank-you page */
-h2.thank-you { 
-  color: green; 
-  background-color: #fff; 
-}
-section.thank-you { 
-  margin-left: 33%; 
-}
-
