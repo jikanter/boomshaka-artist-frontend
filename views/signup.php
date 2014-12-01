@@ -1,10 +1,11 @@
 <?php
 function BoomRenderSignup() { 
 echo <<<BOOMSHAKA
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html>
       <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta encoding="UTF-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/style.css" type="text/css" />
 		<title>Artist Websites by BOOMSHAKA (beta invite)</title>
 	<script>
@@ -31,7 +32,6 @@ echo <<<BOOMSHAKA
             <input name="lastname" id="lastname" type="text" />
           </section>
           <section>
-          
             <label for="email">Email</label>
             <input name="email" id="email" type="text" />
           </section>
@@ -50,7 +50,7 @@ echo <<<BOOMSHAKA
         </form>
 	<p>Questions? Email Jordan Kanter and Dan Schreck at <a href='&#109;ai&#108;to&#58;bo&#111;m%73&#104;aka%64&#101;s&#105;gn%40gm&#37;61i&#108;%2Ec&#111;m'>&#98;o&#111;&#109;&#115;h&#97;kade&#115;&#105;gn&#64;&#103;ma&#105;l&#46;com</a></p>
       </body>
-    </html>
+</html>
 BOOMSHAKA;
 }
 function BoomRenderSignupRequestSubmitted($flash = '') { 
@@ -58,6 +58,7 @@ function BoomRenderSignupRequestSubmitted($flash = '') {
   <!DOCTYPE HTML>
   <html>
   <head>
+  <meta encoding="UTF-8" />
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="styles/style.css" type="text/css" />
 	    <title>Artist Websites by BOOMSHAKA (beta invite)</title>
