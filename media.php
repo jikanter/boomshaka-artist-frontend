@@ -16,9 +16,9 @@ else {
 }
 $request = xmlrpc_encode_request("wp.getMediaItem", array(0, $username, $password, $media_id));
 $context = stream_context_create(array('http' => array(
-                        'method' => 'POST',
-                        'header' => 'Content-Type: text/xml',
-                        'content' => $request)));
+                                       'method' => 'POST',
+                                       'header' => 'Content-Type: text/xml',
+                                       'content' => $request)));
 $data = file_get_contents($endpoint, false, $context);
 $response = xmlrpc_decode($data);
 if ($response && xmlrpc_is_fault($response)) { 

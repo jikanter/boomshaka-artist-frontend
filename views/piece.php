@@ -13,7 +13,7 @@ function BoomRenderPiece($post_id = 1, $response = array(), $flash = '') {
   }
 	echo("<h1>{$response['post_title']}</h1>");
   if ($flash != '') { 
-    echo("<h2 style='color: green;'>" . $flash . "</h2>");
+    echo("<h2 role='flash' style='color: green;'>" . $flash . "</h2>");
   }
   echo("<div><img src='{$response['post_thumbnail']['thumbnail']}'></div>");
 	echo("<form id='artist-piece-info' method='POST' enctype='application/x-www-form-urlencoded' action='update-post.php'>");

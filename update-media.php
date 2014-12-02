@@ -9,6 +9,7 @@
 
 require_once('config.php');
 require_once(LIBRARY_DIR . '/functional.php');
+require_once(LIBRARY_DIR . '/data.php');
 require_once(LIBRARY_DIR . '/media-class.php');
 require_once(INCLUDE_DIR . '/IXR_Library.php');
 
