@@ -13,8 +13,11 @@ Setup:
   5. Make sure wc-client-api-0.3.1 is in the 'INCLUDE_DIR' folder. The wc-client-api-0.3.1 is required for proper ecommerce support for uploaded images
   6. Generate a woocommerce api key for your client.  
   7. Add woocommerce credentials to config.php
-  7. cd to project directory. run the following command at the shell: curl -sS https://getcomposer.com/installer |php
+  7. cd to project directory. run the following command at the shell: `curl -sS https://getcomposer.com/installer |php`
   8. run: php composer.phar install
+  9. Install node (http://nodejs.com)
+  10. Run `npm -g bower` to install bower (http://bower.io) to get node dependencies
+  
   
   That's it, you are installed. Your app should be attached to a local wordpress install.
   
