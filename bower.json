@@ -1,0 +1,26 @@
+{
+  "name": "boomshaka-artist-frontend",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jikanter/boomshaka-artist-frontend",
+  "authors": [
+    "Jordan Kanter <jikanter@gmail.com>"
+  ],
+  "description": "Front End for BoomShaka Site",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "boomshaka",
+    "site",
+    "generation"
+  ],
+  "license": "Proprietary",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
